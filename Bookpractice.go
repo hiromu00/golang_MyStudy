@@ -3,8 +3,6 @@
 
 package main
 
-import "fmt"
-
 func main() {
 	//hello world表示
 	//fmt.Printf("Hello World\n")
@@ -69,32 +67,46 @@ func main() {
 
 	//P81 ポインタについて
 
-	//ポインタ変数宣言
-	var ptr *int
-	//int型の変数を宣言
-	var i int = 12345
+	// //ポインタ変数宣言
+	// var ptr *int
+	// //int型の変数を宣言
+	// var i int = 12345
 
-	ptr = &i
+	// ptr = &i
 
-	fmt.Println("iのアドレス", &i)
-	fmt.Println("ptrの値(変数iのアドレス):", ptr)
+	// fmt.Println("iのアドレス", &i)
+	// fmt.Println("ptrの値(変数iのアドレス):", ptr)
 
-	fmt.Println("iの値", i)
-	fmt.Println("ポインタ経由のiの値", *ptr)
+	// fmt.Println("iの値", i)
+	// fmt.Println("ポインタ経由のiの値", *ptr)
 
-	*ptr = 999
-	fmt.Println("ポインタ経由のiの値", *ptr)
+	// *ptr = 999
+	// fmt.Println("ポインタ経由のiの値", *ptr)
 
-	a, b := 2, 2
-	//関数に変数を渡す。aはそのまま渡す。値渡し
-	//bはアドレス演算子を使ってポインタとして渡す。ポインタ渡し
-	double(a, &b)
-	fmt.Println("値渡し", a)
-	fmt.Println("ポインタ渡し", b)
+	// a, b := 2, 2
+	// //関数に変数を渡す。aはそのまま渡す。値渡し
+	// //bはアドレス演算子を使ってポインタとして渡す。ポインタ渡し
+	// double(a, &b)
+	// fmt.Println("値渡し", a)
+	// fmt.Println("ポインタ渡し", b)\
 
+	//P91
+	// answer := plus(1, 2) //answerの変数にplus関数の戻り値を入れている。変数の型宣言がないのは関数で型宣言があり、型は分かっているため
+	// fmt.Println(answer)
+
+	//P91　多数の値を返す関数の呼び出し
+	// add, sub, mul, div := calc(1, 2)
+	// fmt.Println(add, sub, mul, div)
 }
 
-func double(x int, y *int) {
-	x = x * 2
-	*y = *y * 2
-}
+// func double(x int, y *int) {
+// 	x = x * 2
+// 	*y = *y * 2
+// }
+
+//}
+
+//P91多数の値を返す関数の宣言
+// func calc(a int, b int) (int, int, int, float32) {
+// 	return a + b, a - b, a * b, float32(a) / float32(b)
+// }

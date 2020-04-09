@@ -3,6 +3,8 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	//hello world表示
 	//fmt.Printf("Hello World\n")
@@ -65,4 +67,34 @@ func main() {
 	// 	fmt.Println(i)
 	// }
 
+	//P81 ポインタについて
+
+	//ポインタ変数宣言
+	var ptr *int
+	//int型の変数を宣言
+	var i int = 12345
+
+	ptr = &i
+
+	fmt.Println("iのアドレス", &i)
+	fmt.Println("ptrの値(変数iのアドレス):", ptr)
+
+	fmt.Println("iの値", i)
+	fmt.Println("ポインタ経由のiの値", *ptr)
+
+	*ptr = 999
+	fmt.Println("ポインタ経由のiの値", *ptr)
+
+	a, b := 2, 2
+	//関数に変数を渡す。aはそのまま渡す。値渡し
+	//bはアドレス演算子を使ってポインタとして渡す。ポインタ渡し
+	double(a, &b)
+	fmt.Println("値渡し", a)
+	fmt.Println("ポインタ渡し", b)
+
+}
+
+func double(x int, y *int) {
+	x = x * 2
+	*y = *y * 2
 }

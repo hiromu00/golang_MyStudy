@@ -101,10 +101,20 @@ func main() {
 	// fmt.Println(add, sub, mul, div)
 
 	//P93
-	holiday(1, "元旦", "成人の日")
-	holiday(2, "建国記念日の日")
-	holiday(3, "春分の日")
+	// holiday(1, "元旦", "成人の日")
+	// holiday(2, "建国記念日の日")
+	// holiday(3, "春分の日")
 
+	//関数リテラルを使用して、関数外の変数valにアクセス
+	val := 123
+	func(i int) {
+		fmt.Println(i * val)
+	}(2)
+
+	f := func(s string) {
+		fmt.Println(s)
+	}
+	f("hoge")
 }
 
 // func double(x int, y *int) {
@@ -120,10 +130,10 @@ func main() {
 // }
 
 //P93 可変長パラメーターdaysをもつ関数
-func holiday(month int, days ...string) {
-	fmt.Printf("%d月の祝日は%d日あります。\n", month, len(days))
-	for _, day := range days {
-		fmt.Println(day)
-	}
-	fmt.Println()
-}
+// func holiday(month int, days ...string) {
+// 	fmt.Printf("%d月の祝日は%d日あります。\n", month, len(days))
+// 	for _, day := range days {
+// 		fmt.Println(day)
+// 	}
+// 	fmt.Println()
+// }

@@ -3,6 +3,8 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	//hello world表示
 	//fmt.Printf("Hello World\n")
@@ -97,6 +99,12 @@ func main() {
 	//P91　多数の値を返す関数の呼び出し
 	// add, sub, mul, div := calc(1, 2)
 	// fmt.Println(add, sub, mul, div)
+
+	//P93
+	holiday(1, "元旦", "成人の日")
+	holiday(2, "建国記念日の日")
+	holiday(3, "春分の日")
+
 }
 
 // func double(x int, y *int) {
@@ -110,3 +118,12 @@ func main() {
 // func calc(a int, b int) (int, int, int, float32) {
 // 	return a + b, a - b, a * b, float32(a) / float32(b)
 // }
+
+//P93 可変長パラメーターdaysをもつ関数
+func holiday(month int, days ...string) {
+	fmt.Printf("%d月の祝日は%d日あります。\n", month, len(days))
+	for _, day := range days {
+		fmt.Println(day)
+	}
+	fmt.Println()
+}

@@ -106,15 +106,18 @@ func main() {
 	// holiday(3, "春分の日")
 
 	//関数リテラルを使用して、関数外の変数valにアクセス
-	val := 123
-	func(i int) {
-		fmt.Println(i * val)
-	}(2)
+	// val := 123
+	// func(i int) {
+	// 	fmt.Println(i * val)
+	// }(2)
 
-	f := func(s string) {
-		fmt.Println(s)
-	}
-	f("hoge")
+	// f := func(s string) {
+	// 	fmt.Println(s)
+	// }
+	// f("hoge")
+
+	var z myType = 1234
+	z.println()
 }
 
 // func double(x int, y *int) {
@@ -137,3 +140,9 @@ func main() {
 // 	}
 // 	fmt.Println()
 // }
+
+type myType int
+
+func (varue myType) println() {
+	fmt.Println(varue)
+}

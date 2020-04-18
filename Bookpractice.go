@@ -116,8 +116,26 @@ func main() {
 	// }
 	// f("hoge")
 
-	var z myType = 1234
-	z.println()
+	// var z myType = 1234
+	// z.println()
+
+	//fizzbuzz
+	// 	1~100までの数字で、
+	// 3で割り切れれば、「Fizz!」を表示する
+	// 5で割り切れれば、「Buzz!」を表示する
+	// 3と5で割り切れれば、「Fizz Buzz!」を表示する
+
+	for i := 1; i <= 100; i++ {
+		if i%3 == 0 && i%5 == 0 {
+			fmt.Println("Fizz Buzz!")
+		} else if i%5 == 0 {
+			fmt.Println("Buzz!")
+		} else if i%3 == 0 {
+			fmt.Println("Fizz!")
+		} else {
+			fmt.Println(i)
+		}
+	}
 }
 
 // func double(x int, y *int) {
@@ -141,8 +159,8 @@ func main() {
 // 	fmt.Println()
 // }
 
-type myType int
+// type myType int
 
-func (varue myType) println() {
-	fmt.Println(varue)
-}
+// func (varue myType) println() {
+// 	fmt.Println(varue)
+// }
